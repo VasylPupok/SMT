@@ -35,7 +35,7 @@ public class StartMenuScene extends Scene {
         height = FRAME_HEIGHT;
         loadingScene = new LoadingScene(new GridPane(),FRAME_WIDTH,FRAME_HEIGHT);
 
-        Label firstLabel = new Label("Такого ви ще не бачили!");
+        Label firstLabel = new Label("Вітаємо в СМТ!");
         firstLabel.setFont(Font.font("Candara", FontWeight.BOLD, 40));
         firstLabel.setTextFill(Paint.valueOf("ORANGE"));
 
@@ -43,8 +43,8 @@ public class StartMenuScene extends Scene {
         Image image = new Image(stream);
         ImageView imageView = new ImageView();
         imageView.setImage(image);
-        imageView.setFitWidth(FRAME_WIDTH - 8);
-        imageView.setFitHeight(FRAME_HEIGHT / 3);
+        imageView.setFitWidth(FRAME_WIDTH);
+        imageView.setFitHeight(FRAME_HEIGHT/2);
 
         startButton = new Button("Почати легенду");
         startButton.setPrefWidth(250);
@@ -101,9 +101,7 @@ public class StartMenuScene extends Scene {
         return startButton;
     }
 
-//    public Button getRandomButton() {
-//        return randomButton;
-//    }
+
 
     public Button getExitButton() {
         return exitButton;
