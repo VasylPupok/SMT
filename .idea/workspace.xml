@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" name="Changes" comment="" />
+    <list default="true" id="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smt/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smt/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/smt/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/main.fxml" afterDir="false" />
+    </list>
+    <list id="19200bed-1e5a-4919-941b-87ca71cb2e2b" name="Changes by admin" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smt/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+    </list>
+    <list id="83c80078-6a4c-4c60-8d77-0df15d9dbed7" name="Changes by User" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/main/Main.java">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="2" end1="2" start2="2" end2="4" changelist="19200bed-1e5a-4919-941b-87ca71cb2e2b" />
+        <range start1="3" end1="5" start2="5" end2="8" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="6" end1="6" start2="9" end2="10" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="7" end1="8" start2="11" end2="12" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="9" end1="10" start2="13" end2="20" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="11" end1="16" start2="21" end2="36" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="17" end1="17" start2="37" end2="58" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="20" end1="21" start2="61" end2="62" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="22" end1="23" start2="63" end2="70" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+      </ranges>
+    </file>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2citsYKd72TKTfuMjPfqq1XNGNS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -23,11 +62,51 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "D:/installed/lib/javafx-sdk-16/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\git\SMT\SMT\src\main\resources\main" />
+      <recent name="D:\git\SMT\SMT\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.smt" />
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="SMT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -37,7 +116,22 @@
       <option name="presentableId" value="Default" />
       <updated>1708606435312</updated>
       <workItem from="1708606436365" duration="1000" />
+      <workItem from="1708608130420" duration="5009000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/views/MapView.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

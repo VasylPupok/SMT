@@ -1,8 +1,10 @@
 module com.example.smt {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
-
-    opens com.example.smt to javafx.fxml;
-    exports com.example.smt;
+    exports main;
+    opens main to javafx.fxml;
+    exports main.views;
+    opens main.views to javafx.fxml;
 }
