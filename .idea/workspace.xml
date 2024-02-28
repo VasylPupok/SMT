@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" name="Changes" comment="">
+    <list default="true" id="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" name="Changes" comment="Change start menu">
+      <change afterPath="$PROJECT_DIR$/resources/images/Back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/images/Logo_cmt.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/Team.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Team.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/StartMenuScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/StartMenuScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/MineralCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/MineralCell.java" afterDir="false" />
     </list>
     <list id="19200bed-1e5a-4919-941b-87ca71cb2e2b" name="Changes by admin" comment="" />
     <list id="83c80078-6a4c-4c60-8d77-0df15d9dbed7" name="Changes by User" comment="" />
@@ -59,6 +62,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\SMT_game\resources\images" />
+      <recent name="C:\Users\User\IdeaProjects\SMT_game\resources" />
       <recent name="D:\git\SMT\SMT\src\main\resources\main" />
       <recent name="D:\git\SMT\SMT\src\main\resources" />
     </key>
@@ -98,11 +103,26 @@
       <workItem from="1708606436365" duration="1000" />
       <workItem from="1708608130420" duration="5009000" />
       <workItem from="1708632562882" duration="1087000" />
+      <workItem from="1708634197263" duration="297000" />
+      <workItem from="1708673121569" duration="3286000" />
+      <workItem from="1709117641447" duration="614000" />
     </task>
+    <task id="LOCAL-00001" summary="Change start menu">
+      <created>1708634479973</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708634479973</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change start menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change start menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

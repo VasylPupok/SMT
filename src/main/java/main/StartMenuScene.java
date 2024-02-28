@@ -39,12 +39,12 @@ public class StartMenuScene extends Scene {
         firstLabel.setFont(Font.font("Candara", FontWeight.BOLD, 40));
         firstLabel.setTextFill(Paint.valueOf("ORANGE"));
 
-        InputStream stream = new FileInputStream("resources\\images\\Logo.png");
+        InputStream stream = new FileInputStream("resources\\images\\Team.png");
         Image image = new Image(stream);
         ImageView imageView = new ImageView();
         imageView.setImage(image);
-        imageView.setFitWidth(FRAME_WIDTH);
-        imageView.setFitHeight(FRAME_HEIGHT/2);
+        imageView.setFitWidth(FRAME_WIDTH/2);
+        imageView.setFitHeight(FRAME_HEIGHT/3);
 
         startButton = new Button("Почати легенду");
         startButton.setPrefWidth(250);
@@ -57,22 +57,23 @@ public class StartMenuScene extends Scene {
         exitButton = new Button("Вийти");
         exitButton.setPrefWidth(250);
         exitButton.setPrefHeight(90);
-        exitButton.setStyle("-fx-background-color: red; -fx-text-fill: white; -fx-text-alignment: center");
+        exitButton.setStyle("-fx-background-color: orange; -fx-text-fill: white; -fx-text-alignment: center");
         exitButton.setFont(Font.font("Candara", FontWeight.BOLD, 25));
         exitButton.setOnMouseEntered(mouseEvent -> exitButton.setStyle("-fx-background-color: brown; -fx-text-fill: white; -fx-text-alignment: center"));
-        exitButton.setOnMouseExited(mouseEvent -> exitButton.setStyle("-fx-background-color: red; -fx-text-fill: white; -fx-text-alignment: center"));
+        exitButton.setOnMouseExited(mouseEvent -> exitButton.setStyle("-fx-background-color: orange; -fx-text-fill: white; -fx-text-alignment: center"));
 
-        startMenu = new VBox(20, firstLabel, imageView, startButton,exitButton);
+        startMenu = new VBox(20, firstLabel,imageView, startButton,exitButton);
         startMenu.setAlignment(Pos.CENTER);
         startMenu.setPadding(new Insets(4));
 
         Group startGroup = new Group();
         startGroup.getChildren().add(startMenu);
 
-        InputStream backStream = new FileInputStream("resources\\images\\Back.gif");
+        InputStream backStream = new FileInputStream("resources\\images\\Back.png");
         ImageView background = new ImageView(new Image(backStream));
         background.setFitWidth(FRAME_WIDTH);
         background.setFitHeight(FRAME_HEIGHT);
+
 
         startMenuPane.setPrefWidth(FRAME_WIDTH);
         startMenuPane.setPrefHeight(FRAME_HEIGHT);
