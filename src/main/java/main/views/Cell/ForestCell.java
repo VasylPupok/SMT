@@ -5,14 +5,6 @@ import javafx.scene.paint.ImagePattern;
 
 import java.io.*;
 
-/**
- * This is one of three types of cells on the board
- * Forest cell with it's own image ready to be painted
- *
- * @author Vasia_Pupkin
- * @version 1.0.0
- * @see Cell
- */
 public class ForestCell extends Cell implements EmptyCell {
 
     private static final String imageURL = "file:resources\\images\\cells\\Forest.png";//path to image of forest

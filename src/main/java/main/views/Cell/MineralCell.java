@@ -6,14 +6,6 @@ import javafx.scene.paint.*;
 import javax.sound.sampled.*;
 import java.io.*;
 
-/**
- * __
- * __
- *
- * @author Liubcheck
- * @version 1.0.0
- * @see Cell
- */
 public class MineralCell extends Cell {
 
     private static final String imageURL = "file:resources\\images\\city\\buildings\\Mineral.png";
