@@ -4,17 +4,10 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
+import main.views.City;
 
 import java.io.*;
 
-/**
- * A single cell on world map
- * Used to draw a single sell in {@link MapView}
- *
- * @author Liubcheck
- * @version 1.1.1
- * @see MapView
- */
 public abstract class Cell extends Rectangle {
 
     private int length;
@@ -27,6 +20,10 @@ public abstract class Cell extends Rectangle {
     private boolean isChosen;
     private boolean armyCanMove;
     private boolean armyCanAttack;
+
+    private City cityWhereBuild;
+
+    private ArmyCell armyCellView;
 
     public Cell(int length, int x, int y, boolean isEmpty, boolean armyCanMove, boolean armyCanAttack) {
         this.x = x;
@@ -94,6 +91,9 @@ public abstract class Cell extends Rectangle {
     public void setY(int y) {
         this.y = y;
     }
+    public void setCityWhereBuild(City cityWhereBuild) {
+        this.cityWhereBuild = cityWhereBuild;
+    }
 
     public boolean isReadyToBuild() {
         return readyToBuild;
@@ -143,7 +143,9 @@ public abstract class Cell extends Rectangle {
     }
 
     // methods
-
+    public City getCityWhereBuild() {
+        return cityWhereBuild;
+    }
 
 
     protected void fillCell(String url) {

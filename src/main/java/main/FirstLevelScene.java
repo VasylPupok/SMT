@@ -8,6 +8,8 @@ import java.io.*;
 
 import main.views.MapArrView;
 import main.views.MapView;
+import main.views.Player;
+import main.views.PlayersHandler;
 
 public class FirstLevelScene extends Scene implements LevelScene {
 
@@ -22,7 +24,10 @@ public class FirstLevelScene extends Scene implements LevelScene {
         BorderPane borderPane = new BorderPane();
         GridPane gridPane = new GridPane();
         borderPane.setCenter(gridPane);
-        firstLevel = MapView.getMapView(FRAME_WIDTH, 472, gridPane,21,12, this);
+        PlayersHandler.getPlayersHandler().clearPlayers();
+        PlayersHandler.getPlayersHandler().addPlayer(new Player());
+        PlayersHandler.getPlayersHandler().addPlayer(new Player());
+        firstLevel = MapView.getMapView(FRAME_WIDTH, 472, gridPane, 21, 12, this);
         group = new Group();
         group.getChildren().add(borderPane);
 
@@ -54,6 +59,9 @@ public class FirstLevelScene extends Scene implements LevelScene {
                         firstLevel.getMapLU().x++;
                         firstLevel.getMapRB().x++;
                     }
+                }
+                case BACK_SPACE -> {
+                    StartMenuScene.getStage().setScene(StartMenuScene.getLoadingScene());
                 }
 
             }

@@ -4,11 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" name="Changes" comment="">
+    <list default="true" id="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" name="Changes" comment="Change main screen style">
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Army.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/ArmyCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/Attackable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/BuildingCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/CityCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/CityHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/PlayersHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/ForestCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/ForestCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/GoldmineCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/GoldmineCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/MineralCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/MineralCell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/views/MapArrView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/MapArrView.java" afterDir="false" />
     </list>
     <list id="19200bed-1e5a-4919-941b-87ca71cb2e2b" name="Changes by admin" comment="" />
+    <list id="46692543-d38e-4322-ac16-c3236cacdd44" name="Changes by Sasha" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/FieldCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/FieldCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/MountainCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/MountainCell.java" afterDir="false" />
+    </list>
+    <list id="83c80078-6a4c-4c60-8d77-0df15d9dbed7" name="Changes by User" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,11 +38,28 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/main/views/Cell/Cell.java">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="7" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="9" end1="17" start2="10" end2="10" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="29" end1="29" start2="22" end2="26" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="96" end1="96" start2="93" end2="96" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="143" end1="144" start2="143" end2="146" changelist="46692543-d38e-4322-ac16-c3236cacdd44" />
+        <range start1="145" end1="146" start2="147" end2="150" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+      </ranges>
+    </file>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -33,27 +70,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "D:/installed/lib/javafx-sdk-16/lib",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/installed/lib/javafx-sdk-16/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\SMT_game\resources\images" />
+      <recent name="C:\Users\User\IdeaProjects\SMT_game\resources" />
       <recent name="D:\git\SMT\SMT\src\main\resources\main" />
       <recent name="D:\git\SMT\SMT\src\main\resources" />
     </key>
@@ -91,20 +130,69 @@
       <option name="presentableId" value="Default" />
       <updated>1708606435312</updated>
       <workItem from="1708606436365" duration="1000" />
-      <workItem from="1708608130420" duration="5738000" />
+      <workItem from="1708608130420" duration="5009000" />
+      <workItem from="1708632562882" duration="1087000" />
+      <workItem from="1708634197263" duration="297000" />
+      <workItem from="1708673121569" duration="3286000" />
+      <workItem from="1709117641447" duration="5076000" />
     </task>
+    <task id="LOCAL-00001" summary="Change start menu">
+      <created>1708634479973</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708634479973</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Change main screen style">
+      <created>1709118692136</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709118692136</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change start menu" />
+    <MESSAGE value="Change main screen style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change main screen style" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/main/views/MapView.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
