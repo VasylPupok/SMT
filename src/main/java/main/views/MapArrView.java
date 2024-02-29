@@ -2,9 +2,6 @@ package main.views;
 
 
 import main.views.Cell.*;
-import main.views.MapView;
-
-import java.awt.*;
 import java.util.Random;
 
 public class MapArrView {
