@@ -5,29 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" name="Changes" comment="Change main screen style">
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Army.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/ArmyCell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/Attackable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/BuildingCell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/CityCell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/CityHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/views/PlayersHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/ForestCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/ForestCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/GoldmineCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/GoldmineCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/MineralCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/MineralCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/MapArrView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/MapArrView.java" afterDir="false" />
     </list>
     <list id="19200bed-1e5a-4919-941b-87ca71cb2e2b" name="Changes by admin" comment="" />
-    <list id="46692543-d38e-4322-ac16-c3236cacdd44" name="Changes by Sasha" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/FieldCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/FieldCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/Cell/MountainCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/Cell/MountainCell.java" afterDir="false" />
-    </list>
+    <list id="46692543-d38e-4322-ac16-c3236cacdd44" name="Changes by Sasha" comment="" />
     <list id="83c80078-6a4c-4c60-8d77-0df15d9dbed7" name="Changes by User" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,18 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/main/views/Cell/Cell.java">
-      <ranges>
-        <range start1="6" end1="6" start2="6" end2="7" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
-        <range start1="9" end1="17" start2="10" end2="10" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
-        <range start1="29" end1="29" start2="22" end2="26" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
-        <range start1="96" end1="96" start2="93" end2="96" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
-        <range start1="143" end1="144" start2="143" end2="146" changelist="46692543-d38e-4322-ac16-c3236cacdd44" />
-        <range start1="145" end1="146" start2="147" end2="150" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -166,18 +136,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
           <line>62</line>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
@@ -186,13 +146,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="21" />
+          <line>39</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="22" />
+          <line>45</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
