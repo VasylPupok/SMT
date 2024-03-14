@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" name="Changes" comment="Change main screen style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/views/MapArrView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/views/MapArrView.java" afterDir="false" />
     </list>
-    <list id="19200bed-1e5a-4919-941b-87ca71cb2e2b" name="Changes by admin" comment="" />
+    <list id="19200bed-1e5a-4919-941b-87ca71cb2e2b" name="Changes by admin" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/LevelScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/LevelScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/StartMenuScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/StartMenuScene.java" afterDir="false" />
+    </list>
     <list id="46692543-d38e-4322-ac16-c3236cacdd44" name="Changes by Sasha" comment="" />
     <list id="83c80078-6a4c-4c60-8d77-0df15d9dbed7" name="Changes by User" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +33,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/main/Main.java">
+      <ranges>
+        <range start1="10" end1="10" start2="10" end2="12" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="15" end1="15" start2="17" end2="18" changelist="19200bed-1e5a-4919-941b-87ca71cb2e2b" />
+        <range start1="18" end1="18" start2="21" end2="22" changelist="19200bed-1e5a-4919-941b-87ca71cb2e2b" />
+        <range start1="24" end1="25" start2="28" end2="29" changelist="19200bed-1e5a-4919-941b-87ca71cb2e2b" />
+        <range start1="45" end1="46" start2="49" end2="69" changelist="ae5eec6c-782a-4eb8-8f06-9fa7d7a5368f" />
+        <range start1="47" end1="47" start2="70" end2="82" changelist="19200bed-1e5a-4919-941b-87ca71cb2e2b" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,6 +65,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/installed/lib/javafx-sdk-16/lib&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -105,6 +124,11 @@
       <workItem from="1708634197263" duration="297000" />
       <workItem from="1708673121569" duration="3286000" />
       <workItem from="1709117641447" duration="5076000" />
+      <workItem from="1709225526149" duration="609000" />
+      <workItem from="1709718869391" duration="648000" />
+      <workItem from="1709726431811" duration="3416000" />
+      <workItem from="1710183943370" duration="27000" />
+      <workItem from="1710427266578" duration="4028000" />
     </task>
     <task id="LOCAL-00001" summary="Change start menu">
       <created>1708634479973</created>
@@ -136,28 +160,76 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
-          <line>62</line>
+          <line>64</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
-          <line>63</line>
+          <line>65</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
-          <line>39</line>
+          <line>41</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
-          <line>45</line>
+          <line>47</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
-          <line>57</line>
+          <line>59</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/FirstLevelScene.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/LevelButton.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/ChooseLevelScene.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/ChooseLevelScene.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/ChooseLevelScene.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/main/LevelButton.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/main/ChooseLevelScene.java</url>
+          <line>103</line>
+          <properties class="main.ChooseLevelScene" method="openLevel">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/main/LevelButton.java</url>
+          <line>81</line>
+          <properties class="main.LevelButton" method="runLevel">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

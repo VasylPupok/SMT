@@ -18,8 +18,9 @@ public class StartMenuScene extends Scene {
     private VBox startMenu;
     private Clip clip;
     private Button startButton;
-    //private LevelButton randomButton;
+    private LevelButton randomButton;
     private Button exitButton;
+
     private static Stage stage;
     private static StartMenuScene startMenuScene;
     private static LoadingScene loadingScene;
@@ -53,6 +54,15 @@ public class StartMenuScene extends Scene {
         startButton.setFont(Font.font("Candara", FontWeight.BOLD, 25));
         startButton.setOnMouseEntered(mouseEvent -> startButton.setStyle("-fx-background-color: brown; -fx-text-fill: white; -fx-text-alignment: center"));
         startButton.setOnMouseExited(mouseEvent -> startButton.setStyle("-fx-background-color: red; -fx-text-fill: white; -fx-text-alignment: center"));
+
+        randomButton = new LevelButton(ChooseLevelScene.getChooseLevelScene(),0,"RED",FRAME_WIDTH,FRAME_HEIGHT);
+        randomButton.setPrefWidth(250);
+        randomButton.setPrefHeight(90);
+        randomButton.setText("Нищівний рівень");
+        randomButton.setStyle("-fx-background-color: red; -fx-text-fill: white; -fx-text-alignment: center");
+        randomButton.setFont(Font.font("Candara", FontWeight.BOLD, 25));
+        randomButton.setOnMouseEntered(mouseEvent -> randomButton.setStyle("-fx-background-color: brown; -fx-text-fill: white; -fx-text-alignment: center"));
+        randomButton.setOnMouseExited(mouseEvent -> randomButton.setStyle("-fx-background-color: red; -fx-text-fill: white; -fx-text-alignment: center"));
 
         exitButton = new Button("Вийти");
         exitButton.setPrefWidth(250);
@@ -101,7 +111,9 @@ public class StartMenuScene extends Scene {
     public Button getStartButton() {
         return startButton;
     }
-
+    public Button getRandomButton() {
+        return randomButton;
+    }
 
 
     public Button getExitButton() {

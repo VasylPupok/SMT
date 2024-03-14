@@ -16,10 +16,12 @@ public class FirstLevelScene extends Scene implements LevelScene {
     // private LevelButton levelButton;
     private Clip clip;
     private MapView firstLevel;
+    private LevelButton levelButton;
 
-    public FirstLevelScene(Group group, int FRAME_WIDTH, int FRAME_HEIGHT) {
+    public FirstLevelScene(Group group, int FRAME_WIDTH, int FRAME_HEIGHT, LevelButton levelButton) {
 
         super(group, FRAME_WIDTH, FRAME_HEIGHT);
+        this.levelButton = levelButton;
 
         BorderPane borderPane = new BorderPane();
         GridPane gridPane = new GridPane();
@@ -90,7 +92,10 @@ public class FirstLevelScene extends Scene implements LevelScene {
         }
     }
 
-
+    @Override
+    public LevelButton getLevelButton() {
+        return levelButton;
+    }
     @Override
     public Clip getClip() {
         return clip;
