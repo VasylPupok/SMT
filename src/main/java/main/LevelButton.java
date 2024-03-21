@@ -18,7 +18,7 @@ public class LevelButton extends Button {
     private int FRAME_WIDTH;
     private int FRAME_HEIGHT;
 
-    public LevelButton(ChooseLevelScene chooseLevelScene,int level,String levelButtonColour, int FRAME_WIDTH, int FRAME_HEIGHT){
+    public LevelButton(ChooseLevelScene chooseLevelScene, int level, String levelButtonColour, int FRAME_WIDTH, int FRAME_HEIGHT) {
 
         this.chooseLevelScene = chooseLevelScene;
         this.level = level;
@@ -39,11 +39,10 @@ public class LevelButton extends Button {
             setStyle("-fx-text-fill: black");
         });
         this.setOnMouseExited(mouseEvent -> {
-            if(!isPassed){
+            if (!isPassed) {
                 setBackground(new Background(new BackgroundFill(Paint.valueOf(levelButtonColour), CornerRadii.EMPTY, Insets.EMPTY)));
                 setStyle("-fx-text-fill: white");
-            }
-            else{
+            } else {
                 this.setStyle("-fx-background-color: magenta; -fx-text-fill: yellow");
             }
         });
@@ -57,7 +56,7 @@ public class LevelButton extends Button {
         isPassed = passed;
     }
 
-    public int getLevel(){
+    public int getLevel() {
         return level;
     }
 
@@ -73,25 +72,34 @@ public class LevelButton extends Button {
         return chooseLevelScene;
     }
 
-    public void changeBackground(){
-        if(this.isPassed){
+    public void changeBackground() {
+        if (this.isPassed) {
             this.setStyle("-fx-background-color: magenta; -fx-text-fill: yellow");
         }
     }
 
-    public void runLevel(){
+    public void runLevel() {
         chooseLevelScene.getClip().stop();
         int n = getLevel();
-        switch(n){
-            case 0 -> levelScene = new GameScene(new Group(),FRAME_WIDTH,FRAME_HEIGHT);
-            case 1 -> levelScene = new FirstLevelScene(new Group(),FRAME_WIDTH,FRAME_HEIGHT,this);
+        switch (n) {
+            case 0 ->  {
+                levelScene = new GameScene(new Group(), FRAME_WIDTH, FRAME_HEIGHT);
+            }
+            case 1 -> {
+                levelScene = new FirstLevelScene(new Group(), FRAME_WIDTH, FRAME_HEIGHT, this);
+
+            }
+            case 2 -> levelScene = new SecondLevelScene(new Group(), FRAME_WIDTH, FRAME_HEIGHT, this);
+            case 3 -> levelScene = new ThirdLevelScene(new Group(), FRAME_WIDTH, FRAME_HEIGHT, this);
+            case 4 -> levelScene = new FourthLevelScene(new Group(), FRAME_WIDTH, FRAME_HEIGHT, this);
+            case 5 -> levelScene = new FifthLevelScene(new Group(), FRAME_WIDTH, FRAME_HEIGHT, this);
             //default -> levelScene = new GameScene(new Group(),FRAME_WIDTH,FRAME_HEIGHT);
         }
         isClicked = true;
         chooseLevelScene.openLevel(levelScene);
     }
 
-    public void endLevel(){
+    public void endLevel() {
 
     }
 

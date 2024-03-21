@@ -23,11 +23,24 @@ public class MapView {
         this.width = width;
         this.height = height;
         this.gridPane = gridPane;
-        mapRB = new Point(21,12);
+        mapRB = new Point(21, 12);
         this.levelScene = levelScene;
         CELL_WIDTH = Math.min(width / (mapRB.x - mapLU.x), height / (mapRB.y - mapLU.y));
         initGridPane();
-        mapArrView = MapArrView.getMapArr(CELL_WIDTH,y,x,this);
+        mapArrView = MapArrView.getMapArr(CELL_WIDTH, y, x, this);
+        map = mapArrView.getMap();
+        drawMap();
+    }
+
+    private MapView(int width, int height, GridPane gridPane, int x, int y, LevelScene levelScene, int level) {
+        this.width = width;
+        this.height = height;
+        this.gridPane = gridPane;
+        mapRB = new Point(21, 12);
+        this.levelScene = levelScene;
+        CELL_WIDTH = Math.min(width / (mapRB.x - mapLU.x), height / (mapRB.y - mapLU.y));
+        initGridPane();
+        mapArrView = MapArrView.getMapArr(CELL_WIDTH, y, x, this, level);
         map = mapArrView.getMap();
         drawMap();
     }
@@ -43,6 +56,11 @@ public class MapView {
 
     public static MapView getMapView(int frame_width, int frame_height, GridPane gridPane, int x, int y, LevelScene levelScene) {
         mapView = new MapView(frame_width, frame_height, gridPane, x, y, levelScene);
+        return mapView;
+    }
+
+    public static MapView getMapView(int frame_width, int frame_height, GridPane gridPane, int x, int y, LevelScene levelScene, int level) {
+        mapView = new MapView(frame_width, frame_height, gridPane, x, y, levelScene, level);
         return mapView;
     }
 
@@ -86,8 +104,6 @@ public class MapView {
     }
 
 
-
-
     public LevelScene getLevelScene() {
         return levelScene;
     }
@@ -100,7 +116,7 @@ public class MapView {
         return height;
     }
 
-    public void clearMap(){
+    public void clearMap() {
         mapView = null;
     }
 }
