@@ -31,8 +31,8 @@ public class FifthLevelScene extends Scene implements LevelScene{
         PlayersHandler.getPlayersHandler().addPlayer(new Player());
         PlayersHandler.getPlayersHandler().addPlayer(new Player());
         fifthLevel = MapView.getMapView(FRAME_WIDTH, 472, gridPane,25,25, this, 5);
-//        borderPane.setBottom(ToolPanel.getInstance());
-//        ToolPanel.getInstance().initMapPanel();
+        borderPane.setBottom(ToolPanel.getInstance());
+        ToolPanel.getInstance().initMapPanel();
         group = new Group();
         group.getChildren().add(borderPane);
 
@@ -99,7 +99,7 @@ public class FifthLevelScene extends Scene implements LevelScene{
 //                    StartMenuScene.getStage().setScene(loseScene);
                 }
             }
-//            MiniMap.getMiniMap().drawMiniMap();
+            MiniMap.getMiniMap().drawMiniMap();
             fifthLevel.drawMap();
         });
 

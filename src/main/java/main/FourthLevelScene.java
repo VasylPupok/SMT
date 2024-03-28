@@ -32,8 +32,8 @@ public class FourthLevelScene extends Scene implements LevelScene {
         PlayersHandler.getPlayersHandler().addPlayer(new Player());
         PlayersHandler.getPlayersHandler().addPlayer(new Player());
         fourthLevel = MapView.getMapView(FRAME_WIDTH, 472, gridPane, 23, 23, this, 4);
-//        borderPane.setBottom(ToolPanel.getInstance());
-//        ToolPanel.getInstance().initMapPanel();
+        borderPane.setBottom(ToolPanel.getInstance());
+        ToolPanel.getInstance().initMapPanel();
         group = new Group();
         group.getChildren().add(borderPane);
 
@@ -100,7 +100,7 @@ public class FourthLevelScene extends Scene implements LevelScene {
 //                    StartMenuScene.getStage().setScene(loseScene);
                 }
             }
-//            MiniMap.getMiniMap().drawMiniMap();
+            MiniMap.getMiniMap().drawMiniMap();
             fourthLevel.drawMap();
         });
 

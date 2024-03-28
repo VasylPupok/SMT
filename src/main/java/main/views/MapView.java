@@ -1,6 +1,9 @@
 package main.views;
 
 import main.LevelScene;
+import main.MiniMap;
+import main.views.Cell.ArmyCell;
+import main.views.Cell.BuildingCell;
 import main.views.Cell.Cell;
 import javafx.geometry.Insets;
 import javafx.scene.layout.GridPane;
@@ -85,6 +88,18 @@ public class MapView {
                 }
             }
         }
+    }
+
+    public void moveArmy(int i, int j, ArmyCell armyCellView) {
+        mapArrView.moveArmy(i, j, armyCellView);
+        drawMap();
+        MiniMap.getMiniMap().drawMiniMap();
+    }
+
+    public void changeOnGrass(int i, int j) {
+        mapArrView.changeCellOnGrass(i, j);
+        drawMap();
+        MiniMap.getMiniMap().drawMiniMap();
     }
 
     public Point getMapLU() {

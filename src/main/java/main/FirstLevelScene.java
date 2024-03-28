@@ -31,6 +31,8 @@ public class FirstLevelScene extends Scene implements LevelScene {
         PlayersHandler.getPlayersHandler().addPlayer(new Player());
         firstLevel = MapView.getMapView(FRAME_WIDTH, 472, gridPane, 26, 18, this, 1);
 
+        borderPane.setBottom(ToolPanel.getInstance());
+        ToolPanel.getInstance().initMapPanel();
 
         group = new Group();
         group.getChildren().add(borderPane);
@@ -69,6 +71,7 @@ public class FirstLevelScene extends Scene implements LevelScene {
                 }
 
             }
+            MiniMap.getMiniMap().drawMiniMap();
             firstLevel.drawMap();
         });
 

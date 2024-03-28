@@ -76,4 +76,45 @@ public class ArmyCell extends Cell implements BuildingCell, Attackable {
             exc.printStackTrace();
         }
     }
+    public void fillFields() {
+        this.setChosen(!this.isChosen());
+        Cell[][] cell = MapArrView.getMapArrView().getMap();
+        int indX = this.takeX();
+        int indY = this.takeY();
+        if (isChosen()) {
+            for (int i = Math.max(indX - 1, 0); i <= Math.min(indX + 1, MapArrView.getMapArrView().getColumnsNumber() - 1); i++) {
+                for (int j = Math.max(indY - 1, 0); j <= Math.min(indY + 1, MapArrView.getMapArrView().getRowsNumber() - 1); j++) {
+                    if (!isProperCell(cell[i][j]))
+                        continue;
+                    if (cell[i][j].isArmyCanMove()) {
+                        cell[i][j].setFill(Paint.valueOf("RED"));
+                        cell[i][j].setReadyToBuild(false);
+                        cell[i][j].setReadyToMove(true);
+                        cell[i][j].setArmyCellView(this);
+                    }
+                    if (cell[i][j].isArmyCanAttack()) {
+                        cell[i][j].setFill(Paint.valueOf("BLUE"));
+                        cell[i][j].setReadyToBuild(false);
+                        cell[i][j].setReadyToMove(false);
+                        cell[i][j].setReadyToGotAttack(true);
+                        cell[i][j].setArmyCellView(this);
+                    }
+                }
+            }
+        } else {
+            for (int i = Math.max(indX - 1, 0); i <= Math.min(indX + 1, MapArrView.getMapArrView().getColumnsNumber() - 1); i++) {
+                for (int j = Math.max(indY - 1, 0); j <= Math.min(indY + 1, MapArrView.getMapArrView().getRowsNumber() - 1); j++) {
+                    if (cell[i][j].isArmyCanMove() || cell[i][j].isReadyToGotAttack()) {
+                        cell[i][j].setDefaultFill();
+                        cell[i][j].setReadyToBuild(false);
+                        cell[i][j].setReadyToMove(false);
+                        cell[i][j].setReadyToGotAttack(false);
+                        cell[i][j].setArmyCellView(null);
+                    }
+                }
+            }
+        }
+        System.gc();
+        System.gc();
+    }
 }

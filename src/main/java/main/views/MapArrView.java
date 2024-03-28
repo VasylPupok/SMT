@@ -3,6 +3,7 @@ package main.views;
 
 import main.views.Cell.*;
 
+import java.awt.*;
 import java.util.Random;
 
 public class MapArrView {
@@ -56,6 +57,18 @@ public class MapArrView {
                 }
             }
         }
+    }
+
+    public void moveArmy(int i, int j, ArmyCell armyCell){
+        Point armyCellP = new Point(armyCell.takeX(), armyCell.takeY());
+        map[i][j] = armyCell;
+        armyCell.setX(i);
+        armyCell.setY(j);
+        if(armyCell.getPrevCell() == null){
+            changeCellOnGrass(armyCellP.x, armyCellP.y);
+            return;
+        }
+        map[armyCellP.x][armyCellP.y] = armyCell.getPrevCell();
     }
 
     public void initFirstLevelMap() {

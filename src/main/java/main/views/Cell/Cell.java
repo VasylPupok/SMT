@@ -134,6 +134,13 @@ public abstract class Cell extends Rectangle {
         this.armyCanAttack = armyCanAttack;
     }
 
+    public void setArmyCellView(ArmyCell armyCellView) {
+        this.armyCellView = armyCellView;
+    }
+    public ArmyCell getArmyCell() {
+        return armyCellView;
+    }
+
     public boolean isReadyToGotAttack() {
         return readyToGotAttack;
     }

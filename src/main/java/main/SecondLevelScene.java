@@ -28,8 +28,8 @@ public class SecondLevelScene extends Scene implements LevelScene{
         PlayersHandler.getPlayersHandler().addPlayer(new Player());
         PlayersHandler.getPlayersHandler().addPlayer(new Player());
         secondLevel = MapView.getMapView(FRAME_WIDTH, 472, gridPane,21,21, this, 2);
-        //borderPane.setBottom(ToolPanel.getInstance());
-        //ToolPanel.getInstance().initMapPanel();
+        borderPane.setBottom(ToolPanel.getInstance());
+        ToolPanel.getInstance().initMapPanel();
         group = new Group();
         group.getChildren().add(borderPane);
 
@@ -95,7 +95,7 @@ public class SecondLevelScene extends Scene implements LevelScene{
 //                    StartMenuScene.getStage().setScene(loseScene);
 //                }
             }
-            //MiniMap.getMiniMap().drawMiniMap();
+            MiniMap.getMiniMap().drawMiniMap();
             secondLevel.drawMap();
         });
 
