@@ -152,6 +152,17 @@ public class Player {
         }
         return null;
     }
+
+    public void attack(Army firstArmy, Army secondArmy){
+        while(firstArmy.getHealth()>0 && secondArmy.getHealth()>0){
+            Random rand = new Random();
+            int firstArmyDamage = rand.nextInt(firstArmy.getAttackDamage()*2);
+            int secondArmyDamage = rand.nextInt(secondArmy.getDefenceDamage()*2);
+            firstArmy.receiveDamage(secondArmyDamage);
+            secondArmy.receiveDamage(firstArmyDamage);
+        }
+    }
+
     public void attackCity(Army army, City city){
         while(army.getHealth()>0 && city.getHealth()>0){
             Random rand = new Random();

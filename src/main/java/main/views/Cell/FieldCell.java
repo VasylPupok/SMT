@@ -2,19 +2,15 @@ package main.views.Cell;
 
 import javafx.scene.image.*;
 import javafx.scene.paint.*;
+import main.ToolPanel;
+import main.views.MapView;
+import main.views.PlayersHandler;
 
 import javax.sound.sampled.*;
 import java.io.*;
 
-/**
- * __
- * __
- *
- * @author Liubcheck
- * @version 1.0.0
- * @see Cell
- */
-public class FieldCell extends Cell {
+
+public class FieldCell extends Cell implements BuildingCell {
 
     private static final String imageURL = "file:resources\\images\\city\\buildings\\Field.png";//path to image of field
     private static final String imageEnemyURL = "file:resources\\images\\city\\buildings\\EnemyField.png";
@@ -26,8 +22,25 @@ public class FieldCell extends Cell {
     public FieldCell(int length, int x, int y) {
         super(length,x,y,false, true, false);
     }
-
-
+    @Override
+    protected void clickResponse() throws IOException, InterruptedException {
+        super.clickResponse();
+        if (isReadyToMove()) {
+            getCityWhereBuild().deleteBuilding(this);
+            ArmyCell army = getArmyCell();
+            getArmyCell().fillFields();
+            this.setArmyCellView(army);
+            MapView.getMapView().moveArmy(takeX(), takeY(), getArmyCell());
+            getArmyCell().setPrevCell(null);
+            if(army.getArmy().getHealth() > 0) {
+                checkIfCanGotAttack();
+            }
+            PlayersHandler.getPlayersHandler().getPlayer(1).moveArmy();
+        } else if (ToolPanel.getInstance().getActionsPanel().isReadyToDelete()) {
+            getCityWhereBuild().deleteBuilding(this);
+        }
+        playSound();
+    }
 
 
     @Override

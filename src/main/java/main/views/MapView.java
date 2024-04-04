@@ -102,6 +102,24 @@ public class MapView {
         MiniMap.getMiniMap().drawMiniMap();
     }
 
+    public void buildResources(int i, int j, City cityWhereBuild, Class<? extends Cell> type){
+        mapArrView.buildResources(i,j,cityWhereBuild,type);
+        drawMap();
+        MiniMap.getMiniMap().drawMiniMap();
+    }
+
+    public void changeOnForest(int i, int j) {
+        mapArrView.changeCellOnForest(i, j);
+        drawMap();
+        MiniMap.getMiniMap().drawMiniMap();
+    }
+
+    public void changeOnMountain(int i, int j) {
+        mapArrView.changeCellOnMountain(i, j);
+        drawMap();
+        MiniMap.getMiniMap().drawMiniMap();
+    }
+
     public Point getMapLU() {
         return mapLU;
     }

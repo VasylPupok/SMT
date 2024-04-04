@@ -4,7 +4,13 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
+import main.ToolPanel;
 import main.views.City;
+import main.views.MapArrView;
+import main.views.MapView;
+import main.views.PlayersHandler;
+
+import java.io.*;
 
 import java.io.*;
 
@@ -20,9 +26,7 @@ public abstract class Cell extends Rectangle {
     private boolean isChosen;
     private boolean armyCanMove;
     private boolean armyCanAttack;
-
     private City cityWhereBuild;
-
     private ArmyCell armyCellView;
 
     public Cell(int length, int x, int y, boolean isEmpty, boolean armyCanMove, boolean armyCanAttack) {
@@ -34,6 +38,7 @@ public abstract class Cell extends Rectangle {
         this.setWidth(length);
         this.setHeight(length);
         setMousePointed();
+        setClick();
         setCellImage();
         this.setStroke(Paint.valueOf("BLACK"));
     }
@@ -43,6 +48,8 @@ public abstract class Cell extends Rectangle {
         this.y = 0;
         this.setWidth(length);
         this.setHeight(length);
+        setMousePointed();
+        setClick();
         setCellImage();
         this.setStroke(Paint.valueOf("BLACK"));
     }
@@ -65,6 +72,15 @@ public abstract class Cell extends Rectangle {
         });
     }
 
+    private void setClick() {
+        this.setOnMouseClicked(mouseEvent -> {
+            try {
+                clickResponse();
+            } catch (IOException | InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+    }
 
     // getters & setters
 
@@ -91,9 +107,6 @@ public abstract class Cell extends Rectangle {
     public void setY(int y) {
         this.y = y;
     }
-    public void setCityWhereBuild(City cityWhereBuild) {
-        this.cityWhereBuild = cityWhereBuild;
-    }
 
     public boolean isReadyToBuild() {
         return readyToBuild;
@@ -110,12 +123,29 @@ public abstract class Cell extends Rectangle {
     public void setReadyToMove(boolean readyToMove) {
         this.readyToMove = readyToMove;
     }
+
+    public void setCityWhereBuild(City cityWhereBuild) {
+        this.cityWhereBuild = cityWhereBuild;
+    }
+
+    public City getCityWhereBuild() {
+        return cityWhereBuild;
+    }
+
     public boolean isChosen() {
         return isChosen;
     }
 
     public void setChosen(boolean chosen) {
         isChosen = chosen;
+    }
+
+    public ArmyCell getArmyCell() {
+        return armyCellView;
+    }
+
+    public void setArmyCellView(ArmyCell armyCellView) {
+        this.armyCellView = armyCellView;
     }
 
     public boolean isArmyCanMove() {
@@ -134,13 +164,6 @@ public abstract class Cell extends Rectangle {
         this.armyCanAttack = armyCanAttack;
     }
 
-    public void setArmyCellView(ArmyCell armyCellView) {
-        this.armyCellView = armyCellView;
-    }
-    public ArmyCell getArmyCell() {
-        return armyCellView;
-    }
-
     public boolean isReadyToGotAttack() {
         return readyToGotAttack;
     }
@@ -150,10 +173,33 @@ public abstract class Cell extends Rectangle {
     }
 
     // methods
-    public City getCityWhereBuild() {
-        return cityWhereBuild;
+
+    protected boolean cellIsChosen() {
+        Cell[][] cell = MapArrView.getMapArrView().getMap();
+        for (int i = 0; i < MapArrView.getMapArrView().getColumnsNumber(); i++) {
+            for (int j = 0; j < MapArrView.getMapArrView().getRowsNumber(); j++) {
+                if (cell[i][j].isChosen()) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
+    protected void checkIfCanGotAttack() {
+        Cell[][] cell = MapArrView.getMapArrView().getMap();
+        for (int i = Math.max(getArmyCell().takeX() - 1, 0); i <= Math.min(getArmyCell().takeX() + 1, MapArrView.getMapArrView().getColumnsNumber() - 1); i++) {
+            for (int j = Math.max(getArmyCell().takeY() - 1, 0); j <= Math.min(getArmyCell().takeY() + 1, MapArrView.getMapArrView().getRowsNumber() - 1); j++) {
+                if (cell[i][j] instanceof ArmyCell) {
+                    if (PlayersHandler.getPlayersHandler().getPlayer(1).hasArmy(((ArmyCell) cell[i][j]).getArmy())) {
+                        cell[i][j].setArmyCellView(getArmyCell());
+                        getArmyCell().setChosen(true);
+                        ((ArmyCell) cell[i][j]).gotAttack();
+                    }
+                }
+            }
+        }
+    }
 
     protected void fillCell(String url) {
         Image city = new Image(url);
@@ -179,6 +225,29 @@ public abstract class Cell extends Rectangle {
         toBack();
     }
 
+    /***/
+    protected void clickResponse() throws IOException, InterruptedException {
+
+
+        if (ToolPanel.getInstance().getActionsPanel().isReadyToDelete()) {
+            if (this.getClass().equals(GoldmineCell.class)) {
+                MapView.getMapView().changeOnGrass(x, y);
+                getCityWhereBuild().getCityCell().changeTerritoryHighlight();
+            } else if (this.getClass().equals(MineralCell.class)) {
+                MapView.getMapView().changeOnMountain(x, y);
+                getCityWhereBuild().getCityCell().changeTerritoryHighlight();
+            } else if (this.getClass().equals(FieldCell.class)) {
+                MapView.getMapView().changeOnForest(x, y);
+                getCityWhereBuild().getCityCell().changeTerritoryHighlight();
+            }
+        }
+
+        if (ToolPanel.getInstance().getActionsPanel().cityIsActivated()) {
+            return;
+        }
+
+        ToolPanel.getInstance().refresh(this);
+    }
 
     //abstract methods
 

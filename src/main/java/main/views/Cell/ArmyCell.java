@@ -117,4 +117,32 @@ public class ArmyCell extends Cell implements BuildingCell, Attackable {
         System.gc();
         System.gc();
     }
+
+    public void gotAttack() {
+        ArmyCell army = getArmyCell();
+        getArmyCell().fillFields();
+        System.out.println(army.getArmy().getHealth() + " " + getArmy().getHealth());
+        PlayersHandler.getPlayersHandler().getPlayer(0).attack(army.getArmy(), this.getArmy());
+        System.out.println(army.getArmy().getHealth() + " " + getArmy().getHealth());
+        if (army.getArmy().getHealth() > 0) {
+            System.out.println("We won");
+            this.setArmyCellView(army);
+            getArmy().getCity().deleteArmy(this);
+            MapView.getMapView().moveArmy(takeX(), takeY(), getArmyCell());
+            getArmyCell().setPrevCell(null);
+            getArmy().getCity().generateArmy();
+        } else if (getArmy().getHealth() > 0) {
+            System.out.println("We lose");
+            MapView.getMapView().changeOnGrass(army.takeX(), army.takeY());
+            army.getCityWhereBuild().deleteArmy(army);
+        } else {
+            System.out.println("All lose");
+            MapView.getMapView().changeOnGrass(army.takeX(), army.takeY());
+            MapView.getMapView().changeOnGrass(takeX(), takeY());
+            getArmy().getCity().deleteArmy(this);
+            army.getArmy().getCity().deleteArmy(army);
+        }
+        System.gc();
+        System.gc();
+    }
 }

@@ -2,11 +2,14 @@ package main.views.Cell;
 
 import javafx.scene.image.*;
 import javafx.scene.paint.*;
+import main.ToolPanel;
+import main.views.MapView;
+import main.views.PlayersHandler;
 
 import javax.sound.sampled.*;
 import java.io.*;
 
-public class MineralCell extends Cell {
+public class MineralCell extends Cell implements BuildingCell {
 
     private static final String imageURL = "file:resources\\images\\city\\buildings\\Mineral.png";
     private static final String imageEnemyURL = "file:resources\\images\\city\\buildings\\EnemyMineral.png";
@@ -20,6 +23,25 @@ public class MineralCell extends Cell {
     @Override
     protected void setCellImage() {
         fillCell(imageEnemyURL);
+    }
+    @Override
+    protected void clickResponse() throws IOException, InterruptedException {
+        super.clickResponse();
+        if(isReadyToMove()){
+            getCityWhereBuild().deleteBuilding(this);
+            ArmyCell army = getArmyCell();
+            getArmyCell().fillFields();
+            this.setArmyCellView(army);
+            MapView.getMapView().moveArmy(takeX(), takeY(), getArmyCell());
+            getArmyCell().setPrevCell(null);
+            if(army.getArmy().getHealth() > 0) {
+                checkIfCanGotAttack();
+            }
+            PlayersHandler.getPlayersHandler().getPlayer(1).moveArmy();
+        }  else if (ToolPanel.getInstance().getActionsPanel().isReadyToDelete()) {
+            getCityWhereBuild().deleteBuilding(this);
+        }
+        playSound();
     }
 
     private void playSound(){

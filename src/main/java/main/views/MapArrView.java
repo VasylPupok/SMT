@@ -1,6 +1,7 @@
 package main.views;
 
 
+import main.ToolPanel;
 import main.views.Cell.*;
 
 import java.awt.*;
@@ -224,6 +225,44 @@ public class MapArrView {
         generateBuildings(15,13,secondEnemyCityCell.getCity());
     }
 
+    public void buildResources(int i, int j, City cityWhereBuild, Class<? extends Cell> type) {
+        if (type == null) {
+            return;
+        }
+        int gold = cityWhereBuild.getResGold();
+        int mineral = cityWhereBuild.getResGold();
+        int food = cityWhereBuild.getResGold();
+        if (type.equals(MineralCell.class) && gold >= 1 && mineral >= 3 && food >= 1) {
+            map[i][j] = new MineralCell(CELL_WIDTH, i, j);
+            cityWhereBuild.setResGold(gold - 1);
+            cityWhereBuild.setResMineral(mineral - 3);
+            cityWhereBuild.setResFood(food - 1);
+        } else if(type.equals(FieldCell.class) && gold >= 1 && mineral >= 1 && food >= 3){
+            map[i][j] = new FieldCell(CELL_WIDTH, i, j);
+            cityWhereBuild.setResGold(gold - 1);
+            cityWhereBuild.setResMineral(mineral - 3);
+            cityWhereBuild.setResFood(food - 1);
+        } else if(type.equals(GoldmineCell.class) && gold >= 3 && mineral >= 1 && food >= 1){
+            map[i][j] = new GoldmineCell(CELL_WIDTH, i, j);
+            cityWhereBuild.setResGold(gold - 1);
+            cityWhereBuild.setResMineral(mineral - 3);
+            cityWhereBuild.setResFood(food - 1);
+        } else if (cityWhereBuild.getArmies().size() < 3 && type.equals(ArmyCell.class) && gold >= 10 && mineral >= 10 && food >= 10){
+            map[i][j] = new ArmyCell(CELL_WIDTH, i, j);
+            cityWhereBuild.setResGold(gold - 10);
+            cityWhereBuild.setResMineral(mineral - 10);
+            cityWhereBuild.setResFood(food - 10);
+            cityWhereBuild.getCityCell().setChosen(false);
+            cityWhereBuild.getCityCell().changeTerritoryHighlight();
+        } else {
+            return;
+        }
+        map[i][j].setCityWhereBuild(cityWhereBuild);
+        cityWhereBuild.addBuilding((BuildingCell) map[i][j]);
+        map[i][j].setDefaultFill();
+        cityWhereBuild.getCityCell().setChosen(false);
+        ToolPanel.getInstance().refresh(cityWhereBuild.getCityCell());
+    }
     public void initThirdLevelMap(){
         Random rand = new Random();
         for(int i=0; i<columnsNumber; i++){
