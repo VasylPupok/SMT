@@ -46,7 +46,7 @@ public class City {
 
     public void addBuilding(BuildingCell buildingCell){
         buildings.add(buildingCell);
-        if(buildingCell.getClass().equals(ArmyCell.class)){
+        if(buildingCell.getClass().equals(ArmyCell.class)) {
             Army army = new Army();
             ((ArmyCell) buildingCell).setArmy(army);
             army.setArmyCell((ArmyCell) buildingCell);

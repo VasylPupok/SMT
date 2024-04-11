@@ -20,7 +20,17 @@ public class ArmyCell extends Cell implements BuildingCell, Attackable {
         super(length, x, y, false, false, true);
     }
 
-
+    @Override
+    protected void clickResponse() throws IOException, InterruptedException {
+        super.clickResponse();
+        if ((!cellIsChosen() || isChosen()) && PlayersHandler.getPlayersHandler().getPlayer(0).hasArmy(army)) {
+            fillFields();
+        }
+        if (isReadyToGotAttack()) {
+            gotAttack();
+        }
+        playSound();
+    }
 
     private boolean isProperCell(Cell cell) {
         for (City city : PlayersHandler.getPlayersHandler().getPlayer(0).getCities()) {

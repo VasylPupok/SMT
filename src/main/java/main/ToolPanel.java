@@ -409,16 +409,18 @@ public final class ToolPanel extends Group {
                     if (i.getCityCell().isChosen()) {
                         i.getCityCell().setChosen(false);
                         i.getCityCell().changeTerritoryHighlight();
-                        i.getCityCell().setChosen(true);
+                        //i.getCityCell().setChosen(true);
                     }
                     for (Army j : i.getArmies()) {
                         if (j.getArmyCell().isChosen()) {
                             j.getArmyCell().fillFields();
-                            j.getArmyCell().setChosen(true);
+                            //j.getArmyCell().setChosen(true);
                         }
                     }
                 }
+                ToolPanel.this.defaultPanelView();
             });
+
             endMoveButton.setPrefWidth(80);
             endMoveButton.setPrefHeight(30);
             this.add(endMoveButton, 0, 2, 2, 1);

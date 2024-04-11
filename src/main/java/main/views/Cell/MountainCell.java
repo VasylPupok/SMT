@@ -58,7 +58,6 @@ public class MountainCell extends Cell {
                 i.spendResources();
             }
             army.getArmy().getArmyCell().setChosen(false);
-            //ToolPanel.getInstance().refresh();
         }
     }
     @Override

@@ -66,6 +66,13 @@ public class FirstLevelScene extends Scene implements LevelScene {
                         firstLevel.getMapRB().x++;
                     }
                 }
+                case ESCAPE -> {
+                    try {
+                        StartMenuScene.getStage().setScene(new PauseScene(new GridPane(),FRAME_WIDTH,FRAME_HEIGHT,this));
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
                 case BACK_SPACE -> {
                     StartMenuScene.getStage().setScene(StartMenuScene.getLoadingScene());
                 }
